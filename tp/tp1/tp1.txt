@@ -55,12 +55,5 @@ Résumé   : faire une application dur les Bandes dessinnées avec DB coté serv
   * page random.php pour le choix d'une BD aléatoire (préparer la page uniquement)
   * page legal.php avec un petit texte
   * rajouter une page bd.php pour la fiche BD (préparer la page uniquement)
-
-
-
-
-
-
-
-
-
+  
+  
