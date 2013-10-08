@@ -1,0 +1,4 @@
+.row > input[type="range"] {
+    margin: 0 0 0 120px !important;
+    width: 220px !important;
+}

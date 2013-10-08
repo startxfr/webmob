@@ -1,0 +1,73 @@
+TP 0 : Installation d'un environement de developpement
+=====================================================
+Objectif : Préparer notre station de travail
+Résumé   : Installer tout les outils nécéssaires
+
+1.Install Chrome + plugin firefox
+  * Rechercher Chrome sur google, et installer le navigateur "chrome"
+  * Rechercher les plugin firebug et webdevelopper pour firefox
+
+2. Install de easyPhp
+  * Sur http://www.easyphp.org/download.php Choisir EasyPHP 12.0 with PHP 5.4.4
+  * Lancer l'installation
+  * verifier l'installation sur le navigateur avec http://localhost:8887/
+  * verifier l'accès a phpMyAdmin
+
+3. Install de sqlitemanager pour firefox
+  * aller sur https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/
+  * installer le plugin et redemarrer
+  * verifier que le plugin marche nikel
+
+4. Installation de netbeans
+  * Aller sur http://fr.netbeans.org puis download 6.9
+  * dans page download, choisir francais, puis version complete
+  * lors de l'install, si pas de Java, installer la version JDK 7 chez oracle
+
+5. Création d'un compte sur github
+  * se connecter sur Github et créer un compte avec votre mail
+    * Aller sur http://github.com
+    * Créer un compte
+    * Valider le mail de confirmation
+    * Se connecter sur votre profil
+    * Remplir votre fiche profil
+  * creer un fork du projet sxweb/webmob sur votre espace git
+    * Dans le moteur de recherche, tapper "sxweb"git
+    * regarder la page de l'utilisateur "sxweb"
+    * Trouver sur cette page l'entrepot nommé "webmob"
+    * cliquer dessus, et en haut, faire fork
+
+6. Créer un projet dans Netbeans
+  * Nouveau projet
+    * Projet de type PHP
+    * Le projet s'appel siteBd
+    * le répertoire du projet est sur le bureau (créer un répertoire site)
+    * l'url du projet est bien http://localhost/sitebd/
+
+7. Création de l'alias dans easyPHP
+  * aller sur http://localhost/home/index.php et cliquer sur ajouter un alias
+    * créer un alias nommé "sitebd"
+    * renvoi vers votre dossier (ex: C:\Users\cl\Desktop\site\www)
+    * enregistrer
+  * vérifier que http://localhost/sitebd/ fonctionne
+
+8. Récuperer votre fork github
+  * dans le projet, clic-droit, menu versionning -> initialiser un entrepot git
+    * valider l'emplacement du repertoire
+  * Dans projet, clic droit, menu git -> clone
+    * Mettre adresse de votre fork
+    * identifiant et mot de passe github
+    * Choisir la branche master
+    * Valider le chemin git
+  * Dans projet, clic droit, menu git -> pull
+    * Saisir la branche distante "master" puis valider
+    * Choisir l'association branche master -> master/master
+    * Les fichiers de votre branche apparaissent
+    * Tester dans le navigateur pour voir les fichiers
+
+9. Ajout du premier fichier dans github
+  * Ajouter un fichier index.html dans votre repertoire www
+  * faite un git add sur ce fichier
+  * Faire un git commit
+  * Faire un git push
+  * Aller voir sur votre github pour constater le changement
+

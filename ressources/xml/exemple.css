@@ -1,0 +1,19 @@
+/**
+ *  GENERIC STYLES
+ */
+Config {
+	margin:  2em;
+	color: #222;
+	font: normal 12px tahoma,Verdana,Helvetica,Sans-Serif;
+}
+
+
+
+
+Hippodrome { display: block; background-color: #ada; border: 1px inset #262; }
+
+Hippodrome { color: #626; }
+Hippodrome:before
+{
+content: 'Hippodrome'
+}

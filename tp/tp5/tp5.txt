@@ -1,0 +1,27 @@
+TP 5 : Sencha Touch
+===================
+Objectif : Faire une version SenchaTouch de notre projet
+Résumé   : Version la plus complète d'une application
+
+1. Préparation de l'environnement
+  * Télécharger sencha-touch-2 SDK et le Sencha SDK Tools
+  * Créer un répertoire dans votre projet, nommé st et copier le répertoire sencha touch 2 SDK dedans (renommer le répertoire en sdk)
+  * Installer le SenchaSDKTools
+  * Aller dans le répertoire st/sdk de notre application
+  * a la ligne de commande, lancer la commande sencha pour vérifier la détéction du sdk-sencha-touch
+  * lancer la commande "sencha generate app mybd ../mybd" pour créer votre projet
+  * Personnaliser le fichier app/view/Main.js (appelé depuis app.js)
+    * Mettre le message d'accueil de notre index.php et changer le titre
+    * Mettre notre video + son image d'attente (chemin relatif ../../)
+
+2. Building de notre application
+  * changer dans le fichier de conf app.json la ligne 127 en "logger": "false" à la place de "logger": "no" (bug identifié)
+  * à la ligne de commande, depuis le répertoire mybd avec notre projet,
+    * lancer la commande "sencha app build testing ../testing"
+    * lancer la commande "sencha app build prod ../prod"
+
+3. Re-créer les pages de notre site, en vous aidant de la doc sur http://docs.sencha.com/touch/2-0/
+   * video sur la page d'accueil
+   * formulaire (affichage uniquement)
+   * Geolocalisation
+   * texte simple pour les infos légales

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="exemple.xsl" ?>
+<Config>
+	<Hippo>
+		<Hippodrome name="Vincennes" type_tab_partants="A4nb" casaques="1" prono_texte="1" prono_chiffre="1" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Longchamp" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Saint-Cloud" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Compiègne" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Bordeaux-Le Bouscat" type_tab_partants="A4+" casaques="1" prono_texte="1" plaques="0" ligne_arv="1">
+		</Hippodrome>
+		<Hippodrome name="Lignières" type_tab_partants="A4+" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Alençon" type_tab_partants="A4co" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Châteaubriant" type_tab_partants="A4+" casaques="0" prono_texte="1" prono_chiffre="0" plaques="1">
+		</Hippodrome>
+	</Hippo>
+	<Repertoires>
+		<Repertoires_Sources>
+			<Xml_SECF rep="../xml_secf"/>
+			<Xml_SI rep="../xml_si"/>
+			<Img_Casaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\casaques"/>
+			<Img_ParisPMU rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\paris_pmu"/>
+			<Img_Plaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\plaques"/>
+			<Srv_Casaque url="http://media.geny.com"/>
+		</Repertoires_Sources>
+		<Repertoires_Destination>
+			<Html_Casaques rep="./html"/>
+			<Html_Musique rep="./html"/>
+			<Xml_Indd rep="./xml_indd"/>
+			<Txt_Casaques rep="./txt"/>
+		</Repertoires_Destination>
+	</Repertoires>
+</Config>

@@ -1,0 +1,94 @@
+FORMATION WEB MOBILES
+
+== JOUR 1 : Fondamentaux et construction de page ===
+* Conseils Architectures, « Native or not Native ? » (page 3-7)
+	Côté Serveur
+	Côté Client
+	Application Native vs web
+	Demarrer sa première page mobile
+* Rappels XHTML/CSS indispensables pour frameworks (page 8-28)
+	html (element, atribut, balise)
+	html les balise + div
+	Liens CSS - HTML
+	Rappel CSS
+	Liens Javascript
+	Rappel javascript
+	Point sur le DOM
+	Spécificité des mobiles
+
+== JOUR 2 : Les nouveaux standards du web ===
+* Les apports HTML5: nouvelles balises (page 100-126)
+	Les nouveaux éléments de la sémantique HTML5
+	Le canvas, développement JS graphique en 2D
+	Nouveautés CSS3 en bref
+	Formulaires HTML5 avancés
+	Insertion d’audio/vidéo sans plugin tiers
+	Géolocalisation
+	Le stockage local
+* Les apports CSS3 : rotation, fondu, etc. (page 127-142)
+	bordure
+	fond d'image
+	couleurs
+	textes, polices
+	positionnement
+	transitions
+	media queries
+* Les apports HTML5: géolocalisation, stockage local, cache, etc. (page 143-174)
+	Videos
+	Formulaires
+	Geolocalisation
+	Stockage local
+	WebSQL
+	Stockage deconnecté en HTML5
+
+
+== JOUR 3 : Exemple framework Javascript pour mobile ===
+* Découverte de iUI (page 29-61)
+	Installation
+	Première page
+	Configuration en web-application
+	Les fenetres
+	Les listes
+	Les panels
+	Les formulaires
+	Les extensions
+	Les themes
+	Le Javascript
+* Découverte de JQuery Mobile (page 62-100)
+	gestion des pages
+	les barres d'outils
+	les boutons
+	Formattage et positionnement
+	Formulaires
+	Listes
+	Boites de dialogues
+	Thèmes
+	Javascript et accès au framework
+
+== JOUR 4 : Framework avancés et applications ===
+* Interagir avec Google Maps (page 175-183)
+	L'API google
+	L'objet MAP
+	Les cartes
+	Définir une position
+	Les overlays et markers
+* Découverte de Sencha Touch (page 184-213)
+	Utilisation & fonctionnement
+	Les themes
+	Premiers objets, les panels
+	Imbrication et heritage
+	Les widgets mobiles
+	Les formulaires
+	Gestion du tactile
+	Les boutons
+	Les données - model et store
+	Le composant GMap
+
+== JOUR 5 : création d'application natives ===
+* Déploiement avec PhoneGAP (page 214-234)
+	Utilité et historique
+	Installation
+	Projet android etape par etape
+	Fonctionnalités natives
+	
+

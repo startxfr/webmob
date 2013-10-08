@@ -1,0 +1,112 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>01. Introduction à XML</title>
+      <link rel="stylesheet" href="../../Outils/css.css" media="screen">
+   </head>
+   <body>
+      <h1>01. Introduction à XML</h1>
+    	
+    	<h2>A. Exemple de document XML</h2>
+    	<h3>Code XML (volontairement affiché)</h3>
+    	<pre>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;Config&gt;
+	&lt;Hippo&gt;
+		&lt;Hippodrome name="Vincennes" type_tab_partants="A4nb" casaques="1" prono_texte="1" prono_chiffre="1" plaques="0"&gt;
+		&lt;/Hippodrome&gt;
+		&lt;Hippodrome name="Longchamp" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/&gt;
+		&lt;Hippodrome name="Saint-Cloud" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/&gt;
+		&lt;Hippodrome name="Compiègne" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/&gt;
+		&lt;Hippodrome name="Bordeaux-Le Bouscat" type_tab_partants="A4+" casaques="1" prono_texte="1" plaques="0" ligne_arv="1"&gt;
+		&lt;/Hippodrome&gt;
+		&lt;Hippodrome name="Lignières" type_tab_partants="A4+" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0"&gt;
+		&lt;/Hippodrome&gt;
+		&lt;Hippodrome name="Alençon" type_tab_partants="A4co" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0"&gt;
+		&lt;/Hippodrome&gt;
+		&lt;Hippodrome name="Châteaubriant" type_tab_partants="A4+" casaques="0" prono_texte="1" prono_chiffre="0" plaques="1"&gt;
+		&lt;/Hippodrome&gt;
+	&lt;/Hippo&gt;
+	&lt;Repertoires&gt;
+		&lt;Repertoires_Sources&gt;
+			&lt;Xml_SECF rep="../xml_secf"/&gt;
+			&lt;Xml_SI rep="../xml_si"/&gt;
+			&lt;Img_Casaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\casaques"/&gt;
+			&lt;Img_ParisPMU rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\paris_pmu"/&gt;
+			&lt;Img_Plaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\plaques"/&gt;
+			&lt;Srv_Casaque url="http://media.geny.com"/&gt;
+		&lt;/Repertoires_Sources&gt;
+		&lt;Repertoires_Destination&gt;
+			&lt;Html_Casaques rep="./html"/&gt;
+			&lt;Html_Musique rep="./html"/&gt;
+			&lt;Xml_Indd rep="./xml_indd"/&gt;
+			&lt;Txt_Casaques rep="./txt"/&gt;
+		&lt;/Repertoires_Destination&gt;
+	&lt;/Repertoires&gt;
+&lt;/Config&gt;
+	</pre>
+    	<h3>Ce même code XML, après analyse du navigateur (comportement normal)</h3>
+	<code class="result">
+<Config>
+	<Hippo>
+		<Hippodrome name="Vincennes" type_tab_partants="A4nb" casaques="1" prono_texte="1" prono_chiffre="1" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Longchamp" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Saint-Cloud" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Compiègne" type_tab_partants="A4co" casaques="1" prono_texte="0" prono_chiffre="0" plaques="0"/>
+		<Hippodrome name="Bordeaux-Le Bouscat" type_tab_partants="A4+" casaques="1" prono_texte="1" plaques="0" ligne_arv="1">
+		</Hippodrome>
+		<Hippodrome name="Lignières" type_tab_partants="A4+" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Alençon" type_tab_partants="A4co" casaques="1" prono_texte="1" prono_chiffre="0" plaques="0">
+		</Hippodrome>
+		<Hippodrome name="Châteaubriant" type_tab_partants="A4+" casaques="0" prono_texte="1" prono_chiffre="0" plaques="1">
+		</Hippodrome>
+	</Hippo>
+	<Repertoires>
+		<Repertoires_Sources>
+			<Xml_SECF rep="../xml_secf"/>
+			<Xml_SI rep="../xml_si"/>
+			<Img_Casaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\casaques"/>
+			<Img_ParisPMU rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\paris_pmu"/>
+			<Img_Plaques rep="\\Srvinfo\Hippisme\PDF PROVINCE\pubs_et_images\plaques"/>
+			<Srv_Casaque url="http://media.geny.com"/>
+		</Repertoires_Sources>
+		<Repertoires_Destination>
+			<Html_Casaques rep="./html"/>
+			<Html_Musique rep="./html"/>
+			<Xml_Indd rep="./xml_indd"/>
+			<Txt_Casaques rep="./txt"/>
+		</Repertoires_Destination>
+	</Repertoires>
+</Config>
+	</code>
+	
+    <h2>B. Schemas et DTD</h2>
+	<ul>
+    		<li><a href="exemple.dtd" target="_blank">fichier DTD d'exemple</a></li>
+    		<li><a href="exemple.xsd" target="_blank">fichier XSchema d'exemple</a></li>
+    </ul> 
+	
+	
+    <h2>C. Différents exemples d'affichage d'un même fichier xml</h2>
+	<ul>
+    		<li><a href="exemple.xml" target="_blank">fichier XML d'exemple</a></li>
+    		<li><a href="exemple.css" target="_blank">fichier CSS d'exemple</a></li>
+    		<li><a href="exemple.xsl" target="_blank">fichier XSL d'exemple</a></li>
+    		<li><a href="exemple-css-client.xml" target="_blank">CSS: Resultat de la transformation par le navigateur (côté client)</a></li>
+    		<li><a href="exemple-xsl-client.xml" target="_blank">XSL: Resultat de la transformation par le navigateur (côté client)</a></li>
+  	 		<li><a href="exemple-xsl-serveur.html" target="_blank">XSL: Resultat de la transformation par SAXON (côté serveur)</a></li>
+     </ul> 
+	
+	
+	
+    <h2>Liens utiles</h2>
+	<ul>
+    		<li><a href="http://fr.wikipedia.org/wiki/Standard_Generalized_Markup_Language" target="_blank"><b>Historique du SGML</b> http://fr.wikipedia.org/wiki/Standard_Generalized_Markup_Language</a></li>
+    		<li><a href="http://www.w3.org/XML/" target="_blank"><b>Site officiel pour XML (W3C)</b> http://www.w3.org/XML/</a></li>
+    		<li><a href="http://www.w3schools.com/xml/default.asp" target="_blank"><b>W3 School sur XML</b> http://www.w3schools.com/xml/default.asp</a></li>
+    		<li><a href="http://www.commentcamarche.net/contents/xml/xmldomsax.php3" target="_blank"><b>Comparaison de DOM et SAX</b> http://www.commentcamarche.net/contents/xml/xmldomsax.php3</a></li>
+    </ul>  
+</body>
+</html>

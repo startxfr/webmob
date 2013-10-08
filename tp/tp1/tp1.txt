@@ -1,0 +1,59 @@
+TP 1 : Fondamentaux et construction de page
+===========================================
+Objectif : Création d'une application web
+Résumé   : faire une application dur les Bandes dessinnées avec DB coté serveur pour la page recherche + resultat
+
+1. Création de la homepage
+  * Créer un nouveau fichier php web page, nommée index.php
+  * Mettre la structure de base d'un document html5 (<html>, <head> <title>, <body>)
+  * Rajouter les <meta> HandheldFriendly a true, MobileOptimized a 320 et viewport a "width=device-width, initial-scale=1.0" (<meta name="xxx" content="yyy">)
+  * Ajouter une feuille de style nommée style.css dans  le répertoire jss/
+  * Lier cette feuille de style dans la page d'accueil (<link rel="stylesheet" href=...>)
+  * Utiliser dans le html le fichier img/favicon.ico (<link rel="shortcut icon" href=...>)
+  * Utiliser dans le html les balises <link> pour les logo sur iOS (link apple-touch-icon avec 3 size différentes) fichiers images logo-xx.png
+  * Utiliser dans le html les balises <link> pour le boot iOS (apple-touch-startup-image). fichier image splash-touch.png
+  * Créer la zone d'entete de notre page. Pour cela
+    * créer une <div> .wrapper. Rajouter après une balise <br> avec la classe clear
+    * créer un lien <a> avec l'id #header dans le wrapper. Ce lien pointe vers index.php (retour accueil)
+    * Faire apparaitre l'image <img> logo-72.png dans ce lien
+    * Créer une <div.titre> après cette image
+    * créer 2 balises <h1> et <h2> pour mettre le titre MyBd.fr et son sous-titre ex: "plein d'infos sur les BD"
+
+2. Préparer les styles
+  * Faires les styles "génériques"
+    * Mettre le style du body (texte arial, 1.2em, #333 avec une hauteur de ligne de 1.5em. Annuler les marges et padding) et mettre l'image bg-maison.png en fond de page, avec la couleur #aaa en remplissage
+    * Mettre le style des liens a (pas de décoration : text-decoration)
+    * Mettre le style des liens a (pas de décoration : text-decoration)
+    * Créer un style .clear pour les nettoyage d'alignement (clear: both;)
+    * Créer un style .wrapper pour contenir les différents éléments de notre page (largeur à 100%, affichage block et position statique)
+  * En css, l'en-tete
+    * Faire le style de #header pour un block de 980px de large, centrer (margin: 0 auto;)
+    * Faire le style de #header img.logo le faire flotter à gauche (voir étape suivante)
+    * Faire le style de #header .titre le faire flotter à gauche (les 2 noeud frère sont flottant à gauche)
+    * Faire le style des titre #header h1 et h2, avec 2 couleur de texte différentes, des marges et un padding à 0
+
+3. Créer un menu
+  * créer une div#menu, dans un .wrapper. Rajouter après une balise <br> avec la classe clear
+  * mettre une liste de point <ul> - <li>, contenant des liens <a> vers les pages search.php, last.php, random.php, legal.php
+  * Dans la partie CSS, mettre les styles pour l'afficher en ligne, sur fond gris et sur 980px.
+    * Faire le style de #menu pour un block de 980px de large, centrer (margin: 0 auto;)
+    * style #menu ul avec un block de 100% de largeur, et sans affichage des indices de liste (list-style-type: none)
+    * style #menu li avec des blocs de 25% de long, flottant a gauche. Couleur de fond souhaité (et foncée, ex #333)
+    * style #menu li lors du survol souris (:hover), changer le fond
+    * style #menu li a avec une couleur claire
+
+4. Reproduire le menu en pied de page
+  * copier le menu et le mettre dans une div#footer
+  * copier les styles css mais ne pas mettre de couleur de fond. Par contre coloriser les liens en gris foncé
+  * dans les styles du pied de page, lors du survol, mettre une couleur de fond transparent et foncer la couleur de la police (#000)
+
+5. Créer les pages du menu sur le même model:
+  * page search.php pour le moteur de recherche
+    * dans la zone de contenu, mettre un formulaire, en GET vers la même page
+    * Les critères sont Auteur, Nationalité, Titre, Année, Prix, Disponibilité
+  * page last.php pour les dernières BD ajouté (préparer la page uniquement)
+  * page random.php pour le choix d'une BD aléatoire (préparer la page uniquement)
+  * page legal.php avec un petit texte
+  * rajouter une page bd.php pour la fiche BD (préparer la page uniquement)
+  
+  

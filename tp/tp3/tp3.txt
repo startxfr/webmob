@@ -1,0 +1,66 @@
+TP 2 : Faire une version iUI du site
+====================================
+Objectif : Faire une version iUI de notre projet
+Résumé   : Version simplifiée de iUI
+
+1. Préparation de l'environnement
+
+
+  * Créer un répertoire iUI
+  * Copier la page index.php dans ce répertoire
+    * Dans la page d'index iui, changer les chemins cassés (image + appel css et js)
+    * Faire appel a une feuille css différentes (ex: style-iui.css)
+  * Créer la feuille de style propre à notre interface iui dans le répertoire jss/.
+  * Aller sur http://www.iui-js.org/download pour télécharger la dernière version de iUI
+  * Dans le zip ne prendre que le repertoire iui dans web-app, et le copier dans notre répertoire iui
+  * on a une page blanche, c'est normal (normalement ;)
+
+2. Création de la première page
+  * Supprimer tout le contenu de body, on doit repartir de quasi-zero
+  * Mettre dans le <body> une barre d'outil iUI en haut (balise div.toobar) contenant
+    * Un titre de page (avec l'id #pageTitle)
+    * Un lien retour (<a id="backButton" class="button" href="#">)
+    * On controle le résultat, une barre apparait en haut de la page
+  * Reprendre la liste de menu (balise <ul>) de notre page index.php optimisée pour le web et l'insérer après notre barre d'outil, comme enfant de l'élément <body>
+    * Rajouter un id "home"
+    * Rajouter un attribut title avec "myBD.fr"
+    * Rajouter un attribut selected a true
+    * remplacer les chemins .php en ancres interne (ex: href="search.php" devient href="#search")
+
+3. Créer les pages de contenu
+  * Rajouter 4 balises <div> correspondants aux 4 pages du site.
+  * utiliser le model suivant pour chaque bloc : <div id="idDeLaPage" title="titre de la page" class="panel">contenu de la page</div>
+  * Mettre un petit texte de description en attendant
+
+4. Geolocalisation
+  * Récupérer la function displayGeo() faite précédemment pour l'affichage de la position géographique
+  * Récupérer la balise <span #geolocBox> et la mettre dans la page random
+  * Récupérer le onload mis sur le body (pour initialisation)
+
+5. Formulaire
+  * Récupérer le formulaire (élément <form>) de la page search.php
+  * rajouter les attribut suivant à la balise <form> copiée :
+    * id="search" pour faire le lien avec le menu
+    * title="Recherche" pour le titre de la page
+    * class="panel" pour l'affichage sur fond iOS
+    * name="recherche" pour l'accès au formulaire
+  * changer légèrement la structure du fieldset pour resembler a ça :
+
+            <fieldset>
+                <div class="row">
+                    <label for="auteur">Auteur</label>
+                    <input id="auteur" name="auteur" type="text" placeholder="Nom d'auteur" onchange="memoriser()"/>
+                </div>
+                <...>
+
+    * Enlever l'élément <legend>, et les balises <div.column>
+    * Mettre un class="row" sur toutes les div sans classe
+    * rajouter l'attribut placeholder sur les champs <input>
+  * Après le <fieldset>, mettre 2 liens :
+    * 1 pour la recherche, avec class="whiteButton" et  href="javascript:recherche.submit()"
+    * 1 pour la re-initialisation, avec class="redButton" et  href="javascript:reInit()"
+
+5. Video html5 (si vous avez le temps)
+  * Récupérer le code de lecture de la video en html5 présent sur la page d'accueil
+  * Insérer ce code dans la page last.php
+  * Changer les dimensions de la video en 320 x 180 (ne pas oublier le flash pour les amateur de windows Mobile's)

@@ -1,0 +1,54 @@
+TP 2 : Le passage au HTML5 et CSS3
+==================================
+Objectif : Re-écrire nos page avec du html5 et CSS3
+Résumé   : Rajouter des fonctionnalités videos et geolocalisation sur nos page
+
+1. Changement des balises
+  * Utiliser la balise <nav> pour le menu et dans le pied de page
+  * Utiliser la balise <header> à la place de la balise div.wrapper contenant le logo et le titre de la page
+  * Utiliser la balise <hgroup> à la place de notre classe .titre
+  * Utiliser la balise <section> pour le wrapper du contenu
+  * Utiliser la balise <article> à la place de notre #content
+  * Utiliser la balise <footer> à la place de notre #footer
+
+2. Changement des styles génériques
+  * mettre le logo en rotation de 30 degrés
+  * mettre un ombré sur les textes de menu
+  * lors du survol d'un lien de menu, mettre le texte en rotation, et augmenter le décalage du shadow
+  * Définir une animation (monanim) qui fait des variation de couleur de texte (ex http://www.w3schools.com/css3/css3_animations.asp)
+  * utiliser cette animation sur le titre h1 de notre entete
+  * Faire une copie de cette animation, changer l'ordre des couleurs, puis l'utiliser sur le h2 de l'en-tete
+
+3. Mettre une video en html5
+  * dans la page d'accueil, après notre contenu, rajouter une video. voici la liste des fichiers disponibles :
+    * http://clips.vorwaerts-gmbh.de/VfE_html5.mp4
+    * http://clips.vorwaerts-gmbh.de/VfE.webm
+    * http://clips.vorwaerts-gmbh.de/VfE.ogv
+
+4. Changement du formulaire
+  * mettre un champs de type range sur l'année
+  * essayer les nouvelles balises HTML5 sur le formulaire
+
+5. Utilisation d'un stockage local pour stocker les valeurs saisies par l'utilisateur (persistance des données)
+  * ajouter un fichier de librairie dans notre repertoire jss
+  * appeler cette librairie depuis notre page search.php
+  * Dans cette librairie, créer un object, avec 4 methode static :
+    * set() pour ajouter une cle-valeur a un stockage local (avec controle du support du stockage HTML5)
+    * get() pour récuperer une valeur sur un stockage local
+    * clear() pour vider tout un stockage local
+    * reset() pour effacer une valeur du stockage
+  * En option, pour ceux qui ont le temps
+    * Rajouter un bouton Re-initialiser pour vider la table et les champs de formulaires
+    * Rajouter une méthode à notre objet de stockage pour afficher une popup en cas de non support du stockage
+
+6. Dan la page random, rajouter un affiche de la position géographique de l'internaute (avec stockage local des données)
+  * Dans notre librairie, faire une classe pour gérer les accès au GPS
+  * Dans cette classe, créer 5 méthode static :
+    * init() pour lancer l'appel à la geolocalisation
+    * update() pour rafraîchir les données
+    * get() pour récupérer la chaîne de caractère avec les coordonnées
+    * _set() appelée comme callback lors du la réception de la position
+    * _onError() appelée comme callback lors du la réception de la position (cas d'erreur)
+  * Dans la page random.php
+    * Faire une fonction pour changer le texte d'un paragraphe avec les coordonnées
+    * Appeler cette fonction lors du onload de <body>

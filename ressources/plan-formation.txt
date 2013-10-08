@@ -1,0 +1,92 @@
+Concepts et architecture d'une application pour mobile
+    Bien comprendre le rôle de chaque technologie (HTML, XML, JavaScript, CSS, ...)
+    Qu'entend-on par "Application Ajax" (Asynchronous JavaScript and XML) ?
+    Quelles différences avec un développement en Java (Android) ou Objective C (iPhone) ?
+    Comparaison avec les applications Web traditionnelles
+
+Rappels syntaxiques et compléments (HTML, JavaScript, CSS)
+    Gérer des textes, images, liens, listes, blocs en HTML5
+    Bonnes pratiques à propos de la présentation des données (CSS )
+    L'identification et le regroupement d'éléments (class, id, span, div)
+    Maîtriser le positionnement avec le modèle des boîtes dans CSS (margin, border, padding, bottom, top)
+    Empiler les images (z-index, l'exemple du jeu de cartes)
+    Valider son document comme conforme aux standards du Web (W3C)
+    Rappels syntaxiques sur JavaScript (variables, tests, boucles, fonctions)
+    La représentation d'une page HTML sous forme d'arbre (DOM : Document Object Model)
+    Afficher et interagir dynamiquement avec l'information présentée (DOM et JavaScript, évènements : onclick, onmouseover, ...)
+    Les transformations CSS (webkit-xxxx, rotation, translation, zoom, inclinaison, ...)
+
+IUI une bibliothèque CSS pour mobile
+    Installation et première application pour iPhone
+    Comment disposer du "style" iPhone ?
+    Fenêtres et navigation dans l'application
+    Afficher des menus sous forme de listes
+    Proposer le clavier virtuel de saisie à l'utilisateur
+    Dialoguer avec l'utilisateur avec la class CSS dialog (bouton, fenêtre superposée, ...)
+    Alimenter une base de données grâce aux formulaires
+    Améliorer l'affichage grâce aux extensions iUI (listes de sélection, calendrier, ...)
+    La gestion des thèmes (theme-switcher)
+
+IUI côté Javascript
+    Améliorer encore nos applications avec la partie JavaScript de iUI
+    Maîtriser la gestion des liens et de leurs attributs (href, type, target, submit, cancel, ...)
+    Affichage de menus, saisie avec JavaScript
+    Navigation rapide dans les pages (showPageByID, goBack)
+    Précisions sur les méthodes GET et POST
+    Comprendre les différentes formes d'appels d'une page HTML (showPageByHref, ajax)
+    Insérer une ou plusieurs fenêtres en fin de page HTML (insertPages)
+    Récupérer l'élément DOM associé à la fenêtre courante (getSelectedPage)
+    Bien utiliser le DOM (addClass, removeClass)
+    Exemples : utilisation de liens différents selon le contexte, récupération d'information suite à la saisie dans un formulaire
+    Evènements associés aux fenêtres (load, unload, focus, blur, ...)
+
+Stockage des données sur le mobile
+    Apports d'une base SQL interne au navigateur par rapport aux cookies
+    Différentes philosophies de stockage (localStorage, sessionStorage)
+    JavaScript et les bases SQL locales
+    Création et utilisation d'une base (openDatabase, executeSQL, ...)
+    Récupérer les données (select) et les afficher
+    Connaître les limites de cette solution par rapport à une base déportée
+
+Multi-touch
+    Les évènements générés selon les actions de l'utilisateur (touch, gesture)
+    Apprendre à gérer les multiples appuis sur l'écran tactile du téléphone (touchstart, touchmove, touchend)
+    Propriétés des évènements touch
+    Exemple de déplacement d'un objet à l'écran
+    Réaliser des agrandissements/rétrécissements (gesture)
+    Rotation des objets et Zoom
+
+Graphisme
+    Limites et possibilités
+    Principes de base (ligne, rectangle, arcs, ...)
+    Colorier une figure
+    Formes géométriques (balise )
+    Conseils pour la gestion des couleurs
+    Traitement des images
+    Pour aller plus loin ... (courbes quadratiques et de Bézier)
+    Synthèse des méthodes JavaScript concernées
+
+Cartes Google Maps
+    Considérations techniques pour la géo-localisation (fichier à inclure, natif ou non, ...)
+    Différentes façons d'intégrer des cartes Google Maps (maps, natif, API de Google Maps en JavaScript)
+    Comparaison technique des différentes méthodes
+    Les possibilités d'interaction avec les cartes
+
+Rendre native son application Web avec PhoneGAP
+    Comment faire en sorte que son application ne soit plus "Web dépendante" ?
+    Que gagne-t-on à utiliser une application native ?
+    L'exemple du SDK pour le développement iPhone
+    Téléchargement, installation, et pré-requis pour utiliser PhoneGAP
+    Utilisation du simulateur iPhone Intégration de PhoneGap dans notre code (phonegap.js, build, ...)
+    Tests de portage du code HTML/CSS/JavaScript pour différents types de téléphones (Android, iPhone, ...)
+    Comparaison entre une application native et sa version "distante"
+    Les aspects administratifs (iPhone developer Program, Certificats, ...)
+
+La bonne utilisation des fonctions natives
+    Les effets à éviter devant tant de richesse
+    Gestion du GPS et de l'accéléromètre
+    Gérer le vibreur
+    Comment utiliser un son ?
+    La gestion des contacts du téléphone
+    Les fenêtres d'alerte
+    Récupérer les images de l'appareil photo

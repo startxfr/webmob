@@ -1,0 +1,20 @@
+TP 6 : Sencha Touch dans phonegap
+=================================
+Objectif : Faire une version SenchaTouch packagée par phonegap
+Résumé   : Version native d'une application
+
+1. Préparation de l'environnement
+  * Télécharger eclipse, Google Android SDK, et le plugin eclipse ADT
+  * suivre le guide de création sur http://docs.phonegap.com/en/2.0.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android
+
+2. Modifications dans sencha pour utiliser des fonctions natives
+  * Créer un model, utilisant le stockage local pour enregistrer un trace du matériel
+  * Créer un store pour permettre d'enregistrer les traces que l'on collectera.
+    * lancer la commande "sencha app build testing ../testing"
+    * lancer la commande "sencha app build prod ../prod"
+
+3. Re-créer les pages de notre site, en vous aidant de la doc sur http://docs.sencha.com/touch/2-0/
+   * video sur la page d'accueil
+   * formulaire (affichage uniquement)
+   * Geolocalisation
+   * texte simple pour les info légales

@@ -1,0 +1,45 @@
+TP 4 : Faire une version JQM du site
+====================================
+Objectif : Faire une version JQueryMobile de notre projet
+Résumé   : Version plus complète d'une application
+
+1. Préparation de l'environnement
+  * Créer un répertoire jqm
+  * Copier la page index.php de iUI dans ce répertoire
+    * Dans cette page d'index JQM, changer les chemins cassés (image + appel css et js)
+    * Faire appel a une feuille css différentes (ex: style-jqm.css)
+  * Créer la feuille de style propre à notre interface iui dans le répertoire jss/.
+  * Aller sur http://jquerymobile.com/download/ pour récupérer les liens vers les 2 fichiers jquery-mobile et la lib jquery.
+    Vous pouvez choisir ce que vous préférez, code lisible ou rapide
+  * on a une page ou tout est mis a la suite, sans règle, c'est normal (on remarque que les éléments de formulaire sont déjà grandement améliorés)
+  * dans la partie javascript, utiliser le chargeur domready de jquery ( $(function() {...} ) pour initialiser la geolocalisation, et les 2 fonctions charger sur le onload du body
+
+2. Refaire les 5 pages internes
+  * Virer l'élément <div.toolbar> qui ne va plus nous servir avec JQM
+  * Modifier la structure HTML de nos div de page, en respectant le model suivant :
+    <div id="idDePage" data-role="page">
+            <div data-role="header"><h1>Mon titre</h1></div>
+            <div data-role="content">ici votre contenu</div>
+            <div data-role="footer"><h6>Pied de page</h6></div>
+    </div>
+  * Rajouter le data-add-back-btn="true" a toutes les pages sauf la home
+  * Rajouter l'attribut  data-position="fixed" sur les footers de pages
+
+3. Pour la page formulaire, faire quelques modifications
+  * Rajouter la classe ui-bar sur le footer de la page de notre formulaire
+  * Déplacer les 2 liens bouton dans le footer
+  * Leurs rajouter les attributs data-role="button" et data-icon="xxxxxx"
+    voir sur le site http://4.bp.blogspot.com/-Hf3-4_Kj3wg/TtkRItF-juI/AAAAAAAAAFY/ZAsv2SIFpXQ/s1600/ButtonIcon.png pour trouver des icones
+  * Mettre un attribut data-theme sur le bouton de recherche
+
+4. Retour a la geolocalisation
+  * rajouter dans votre <head> le chargement de l'API Javascript google http://maps.google.com/maps/api/js?sensor=true
+  * rajouter dans votre <head> le chargement du plugin jquery-ui-map via le CDN http://jquery-ui-map.googlecode.com/svn/trunk/ui/min/jquery.ui.map.full.min.js
+  * Dans la page random, après le paragraphe d'affiche des coordonnées géographique, rajouter une <div#geoMap> avec une class="map rounded"
+  * Modifier, dans notre librairie javascript, le fonctionnement de la methode update de l'objet myGPS pour accepter une fonction callback en parametre
+  * Utiliser la methode update, dans la fonction displayGeo(), en lui fournissant un callback lors de la récupération des données GPS
+  * Dans le callback :
+    * Initialiser le plugin jquery-gmap sur la <div#geoMap>
+    * Binder une fonction sur l'événement "init" de la <div#geoMap>
+    * dans cette fonction, ajouter un marker sur nos coordoonnées (option addMarker du plugin gmap)
+    * Rendre ce marker cliquable et ouvrir une popup avec un message personnalisé
