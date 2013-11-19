@@ -1,0 +1,119 @@
+@keyframes monanim {
+    0%   {color:blue;}
+    25%  {color:white;}
+    50%  {color:red;}
+    75%  {color:green;}
+    100% {color:orange;}
+}
+@-moz-keyframes monanim {
+    0%   {color:blue;}
+    25%  {color:white;}
+    50%  {color:red;}
+    75%  {color:green;}
+    100% {color:orange;}
+}
+@-webkit-keyframes monanim {
+    0%   {color:blue;}
+    25%  {color:white;}
+    50%  {color:red;}
+    75%  {color:green;}
+    100% {color:orange;}
+}
+@-o-keyframes monanim {
+    0%   {color:blue;}
+    25%  {color:white;}
+    50%  {color:red;}
+    75%  {color:green;}
+    100% {color:orange;}
+}
+
+@keyframes monanim2 {
+    0%   {color:white;}
+    25%  {color:red;}
+    50%  {color:orange;}
+    75%  {color:green;}
+    100% {color:blue;}
+}
+@-moz-keyframes monanim2 {
+    0%   {color:white;}
+    25%  {color:red;}
+    50%  {color:orange;}
+    75%  {color:green;}
+    100% {color:blue;}
+}
+@-webkit-keyframes monanim2 {
+    0%   {color:white;}
+    25%  {color:red;}
+    50%  {color:orange;}
+    75%  {color:green;}
+    100% {color:blue;}
+}
+@-o-keyframes monanim2 {
+    0%   {color:white;}
+    25%  {color:red;}
+    50%  {color:orange;}
+    75%  {color:green;}
+    100% {color:blue;}
+}
+
+@media only screen {
+    
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+    /* HTML5 display-role reset for older browsers */
+    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+    body {line-height:1;}
+    ol,ul {list-style:none;}
+    blockquote,q {quotes:none;}
+    blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
+    table {border-collapse:collapse;border-spacing:0;}
+
+    /**/
+ 
+    body {font-family:'Roboto Condensed',Arial,sans-serif;font-size:1.2em;color:#333;line-height:1.5em;margin:0;padding:0;background:#aaa url(/img/bg-maison.png) repeat center 0;letter-spacing:1px;}
+    pre {font-size:Arial;margin:10px;background:rgba(0,0,0,.7);color:#aea;padding:10px;border-radius:10px;font-size:.7em;line-height:1.5em;}
+    a {text-decoration:none;}
+    .wrapper {overflow:hidden;}
+    #header {display:block;width:980px;margin:0 auto;}
+    #header .logo {float:left;transform:rotate(-30deg);-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);-moz-transform:rotate(-30deg);-o-transform:rotate(-30deg);}
+    #header .titre {float:left; margin-left:15px;}
+    #header h1 {color:#333;margin-top:8px;-moz-animation:monanim 2s;-webkit-animation:monanim 2s;-o-animation:monanim 2s;animation:monanim 2s;}
+    #header h2 {color:purple;-moz-animation:monanim2 2s;-webkit-animation:monanim2 2s;-o-animation:monanim2 2s;animation:monanim2 2s;}
+    #menu {width:980px;margin:0 auto;}
+    #menu ul {list-style-type:none;}
+    #menu li {width:25%;float:left;background:#333;}
+    #menu .current {background:#666;}
+    #menu li:hover {background:#666;transform:rotate(-180deg);-ms-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);-moz-transform:rotate(-180deg);}
+    #menu a {color:#aea;display:block;text-align:center;text-shadow:0.1em 0.1em #0ff;}
+    #menu a:hover {text-shadow:0.1em 0.2em #0ff;}
+    #content {overflow:hidden;width:960px;background:white;padding:10px;margin:0 auto;min-height:150px;}
+    #content form {width:345px;margin:0 auto;}
+    #content fieldset {border:0;background:#ededed;border-radius:5px;margin:10px;box-shadow:1px 1px 8px #888;padding:10px;}
+    #content legend {background:#ededed;padding:0 15px;margin:0;border-radius:5px;position:relative;left:-10px;}
+    #content label {display:inline-block;width:140px;cursor:pointer;}
+    #content input[type=reset],
+    #content input[type=submit] {font-family:'Roboto Condensed',Arial,sans-serif;cursor:pointer;margin-top:10px;margin-right:2px;background:#333;color:white;border-radius:5px;border:0;padding:5px 20px;font-size:1em;float:right;}
+    #content input[type=reset] {float:left;}
+    #content table {width:100%;margin-top:30px;background:#333;color:white;border-radius:5px;border-collapse:collapse;}
+    #content .odd {background:#fbfbfb;color:#333;}
+    #content .even {background:#ececec;color:#333;}
+    #content video {display:block; margin:20px auto;}
+    #content input[type=range],
+    #content input[type=number] {width:149px;}
+    #footer {width:980px;margin:0 auto;}
+    #footer ul {list-style-type:none;}
+    #footer li {width:25%;float:left;}
+    #footer li:hover {background:rgba(0,0,0,.3);}
+    #footer a {color:#040;display:block;text-align:center;}
+    #footer a:hover {color:#aea;}
+}
+
+@media only screen and (max-width:980px) {
+    #header,
+    #menu,
+    #footer {width:95%;}
+    #content {width:92%;}
+}
