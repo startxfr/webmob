@@ -1,6 +1,9 @@
+<?php
+if(!preg_match('/iUI/', $_SERVER['REQUEST_URI'])) {
+?>
         <header class="wrapper">
             <a href="index.php" id="header">
-                <img src="img/logo-72.png" class="logo" alt="logo myBd"/>
+                <img src="/img/logo-72.png" class="logo" alt="logo myBd"/>
                 <hgroup class="titre">
                     <h1>MyBd.fr</h1>
                     <h2>Plein d'infos sur les BD</h2>
@@ -25,3 +28,6 @@
                 </ul>
             </nav>
         </section>
+<?php
+}
+?>

@@ -82,16 +82,16 @@
     
     k64.geoloc._onError = function(oError)
     {
-        var _sInfo = "<b>Erreur lors de la géolocalisation : ";
+        var _sInfo = "<b>Erreur lors de la g\u00e9olocalisation : ";
         switch(oError.code) {
             case oError.TIMEOUT:
                 _sInfo += "Timeout !<br/>";
             break;
             case oError.PERMISSION_DENIED:
-                _sInfo += "Vous n’avez pas donné la permission<br/>";
+                _sInfo += "Vous n'avez pas donn\u00e9 la permission<br/>";
             break;
             case oError.POSITION_UNAVAILABLE:
-                _sInfo += "La position n’a pu être déterminée<br/>";
+                _sInfo += "La position n'a pu \u00eatre d\u00e9termin\u00e9e<br/>";
             break;
             case oError.UNKNOWN_ERROR:
                 _sInfo += "Erreur inconnue";
@@ -103,11 +103,18 @@
     
     window.onload = function()
     {
+        if(document.getElementById('indic')) {
+            document.getElementById('indic').innerHTML = '(' + document.getElementById('year').value + ')';
+            document.getElementById('year').onchange = function(e)
+            {
+                document.getElementById('indic').innerHTML = '(' + this.value + ')';
+            };
+        }
         if(k64.storage._onError) {
             k64.storage._onError();
         }
         else {
-            if(/random.php/.test(window.location.href)) {
+            if(/(#)?random(.php)?/.test(window.location.href)) {
                 k64.geoloc.init();
                 document.getElementById('currentLocation').innerHTML = k64.geoloc.get("lastPosition");
             }

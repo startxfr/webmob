@@ -1,3 +1,6 @@
+<?php
+if(!preg_match('/iUI/', $_SERVER['REQUEST_URI'])) {
+?>
         <nav id="footer">
             <ul>
                 <li>
@@ -14,3 +17,6 @@
                 </li>
             </ul>
         </nav>
+<?php
+}
+?>
