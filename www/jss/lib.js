@@ -53,14 +53,17 @@
         return this;
     };
 
-    k64.geoloc.update = function()  {
-        navigator.geolocation.getCurrentPosition(k64.geoloc._set, k64.geoloc._onError);
+    k64.geoloc.update = function(callBack)
+    {
+        if(typeof callBack !== 'function') {
+            callBack = k64.geoloc._set;
+        }
+        navigator.geolocation.getCurrentPosition(callBack, k64.geoloc._onError);
         return this;
     };
     
     k64.geoloc._set = function(oPosition)
     {
-        console.log(oPosition);
         var _sInfopos = "";
         _sInfopos += "Latitude : " + oPosition.coords.latitude + "<br/>";
         _sInfopos += "Longitude: " + oPosition.coords.longitude + "<br/>";
@@ -101,6 +104,35 @@
         k64.storage.set("lastPosition", _sInfo);
     };
     
+    k64.geoloc.displayGeo = function()
+    {
+        document.getElementById("currentLocation").innerHTML = k64.geoloc.get("lastPosition");
+        k64.geoloc.update(function(position)
+        {
+            geoposString = '' + position.coords.latitude + ',' + position.coords.longitude;
+            $('#geoMap').gmap().bind('init', function(ev, map)
+            {
+                $('#geoMap').gmap(
+                    'addMarker',
+                    {
+                        'position'  : geoposString,
+                        'bounds'    : true
+                    }
+                ).click(function()
+                {
+                    $('#geoMap').gmap(
+                        'openInfoWindow',
+                        {
+                            'content': 'Votre position !!!<br/>' + document.getElementById("currentLocation").innerHTML
+                        },
+                        this
+                    );
+                });
+            });
+        });
+        return this;
+    };
+    
     window.onload = function()
     {
         if(document.getElementById('indic')) {
@@ -116,7 +148,12 @@
         else {
             if(/(#)?random(.php)?/.test(window.location.href)) {
                 k64.geoloc.init();
-                document.getElementById('currentLocation').innerHTML = k64.geoloc.get("lastPosition");
+                if(/jqm/.test(window.location.href)) {
+                    k64.geoloc.displayGeo();
+                }
+                else {
+                    document.getElementById('currentLocation').innerHTML = k64.geoloc.get("lastPosition");
+                }
             }
         }
     };

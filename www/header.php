@@ -1,5 +1,5 @@
 <?php
-if(!preg_match('/iUI/', $_SERVER['REQUEST_URI'])) {
+if(!preg_match('/iUI|jqm/', $_SERVER['REQUEST_URI'])) {
 ?>
         <header class="wrapper">
             <a href="index.php" id="header">

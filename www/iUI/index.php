@@ -52,8 +52,8 @@
                     <input type="text" name="availability" id="availability" placeholder="0 ou 1"/>
                 </div>
                 <div class="row">
-                    <input type="reset" value="Effacer"/>
-                    <input type="submit" value="Rechercher"/>
+                    <a href="#" class="redButton">Effacer</a>
+                    <a href="#" class="whiteButton">Rechercher</a>
                 </div>
             </fieldset>
         </form>

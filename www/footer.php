@@ -1,19 +1,20 @@
 <?php
 if(!preg_match('/iUI/', $_SERVER['REQUEST_URI'])) {
+    $bJqm = preg_match('/jqm/', $_SERVER['REQUEST_URI']);
 ?>
-        <nav id="footer">
+        <nav id="footer"<?= $bJqm ? ' data-position="fixed"' : ''?>>
             <ul>
                 <li>
-                    <a href="search.php">Search</a>
+                    <a href="<?=$bJqm ? '#' : ''?>search<?=$bJqm ? '' : '.php'?>">Search</a>
                 </li>
                 <li>
-                    <a href="last.php">Last</a>
+                    <a href="<?=$bJqm ? '#' : ''?>last<?=$bJqm ? '' : '.php'?>">Last</a>
                 </li>
                 <li>
-                    <a href="random.php">Random</a>
+                    <a href="<?=$bJqm ? '#' : ''?>random<?=$bJqm ? '' : '.php'?>">Random</a>
                 </li>
                 <li>
-                    <a href="legal.php">Legal</a>
+                    <a href="<?=$bJqm ? '#' : ''?>legal<?=$bJqm ? '' : '.php'?>">Legal</a>
                 </li>
             </ul>
         </nav>
