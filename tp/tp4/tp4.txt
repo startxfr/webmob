@@ -43,3 +43,17 @@ Résumé   : Version plus complète d'une application
     * Binder une fonction sur l'événement "init" de la <div#geoMap>
     * dans cette fonction, ajouter un marker sur nos coordoonnées (option addMarker du plugin gmap)
     * Rendre ce marker cliquable et ouvrir une popup avec un message personnalisé
+
+EN OPTION
+5. Utiliser vos connaissance en jQuery pour :
+  * créer une source de donnée JSON retournant la structure suivante:
+{ success:true,
+  message:"liste des bd",
+  data: [
+    {... info bd 1 ...},
+    {... info bd 2 ...},
+    {... info bd 3 ...}
+  ] }
+  * Ajouter dans la page last.php un tableau avec le nom de la bd et sont auteurs dans 2 colonnes.
+    mettre les titres de tableau et une ligne d'exemple avec les classes suivantes : bdrow sur la ligne et bdrow-titre, bdrow-auteur sur les cellules
+  * Ajouter un code javascript permettant de recuperer le contenu de votre source json (par exemple fichier bd.json) et de l'analyser pour remplir le tableau en reprenant la ligne d'exemple comme model

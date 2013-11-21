@@ -66,8 +66,31 @@
                     form.prix.value =
                     form.dispo.value = ""
             }
+            
+            function chargerListeBd() {
+                $.ajax({
+                    url:"bd.json",
+                    success: function(result) {
+                        if(result && result.success) {
+                            htmlfrag = $($(".bdrow")[0]);
+                            tbody = htmlfrag.parent();
+                            $(result.data).each(function(i,item){
+                                var html = htmlfrag.clone();
+                                $('.bdrow-titre',html).text(item.nom);
+                                $('.bdrow-auteur',html).text(item.illustrateur);
+                                tbody.append(html)
+                            });
+                            htmlfrag.remove();
+                        }
+                        else {
+                            
+                        }
+                    }
+                });
+            }
 
             $(function() {
+                chargerListeBd();
                 myGps.init()
                 displayGeo();
                 charger();
@@ -132,7 +155,20 @@
         <div id="last" data-role="page" data-add-back-btn="true">
             <div data-role="header" data-position="fixed"><h1>Dernièrement</h1></div>
             <div data-role="content">
-                Ici mettre la liste des dernières BD
+                <table border="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Auteur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bdrow">
+                            <td class="bdrow-titre">Titre</td>
+                            <td class="bdrow-auteur">Auteur</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <p>
                     <video width="320" height="180" controls="">
                         <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
