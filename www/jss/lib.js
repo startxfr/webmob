@@ -127,7 +127,7 @@
                     $('#geoMap').gmap(
                         'openInfoWindow',
                         {
-                            'content': 'Votre position !!!<br/>' + document.getElementById("currentLocation").innerHTML
+                            'content': 'Votre position (ou presque :p) !!!<br/>' + document.getElementById("currentLocation").innerHTML
                         },
                         this
                     );
@@ -164,8 +164,8 @@
             });
             $('a').click(function(e)
             {
-                $('a').removeClass('ui-btn-active');
-                $('a[href=' + this.href.substring(this.href.lastIndexOf('/') + 1) + ']').addClass('ui-btn-active');
+                $('footer a').removeClass('ui-btn-active');
+                $('footer a[href=' + this.href.substring(this.href.lastIndexOf('/') + 1) + ']').addClass('ui-btn-active');
             });
         }
     };

@@ -27,11 +27,12 @@
             <div data-role="footer"></div>
         </div>
         <div id="search" data-role="page" data-add-back-btn="true">
-            <div data-role="header"></div>
+            <div data-role="header">
+                <h1>Recherche</h1>
+            </div>
             <div data-role="content">
                 <form method="get" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
                     <fieldset>
-                        <legend>Recherche</legend>
                         <div class="row">
                             <label for="author">Auteur</label>
                             <input type="text" name="author" id="author" placeholder="Nom d'auteur"/>
