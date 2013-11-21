@@ -109,13 +109,17 @@
         document.getElementById("currentLocation").innerHTML = k64.geoloc.get("lastPosition");
         k64.geoloc.update(function(position)
         {
-            geoposString = '' + position.coords.latitude + ',' + position.coords.longitude;
-            $('#geoMap').gmap().bind('init', function(ev, map)
+            $('#geoMap').gmap({
+                'mapTypeId' : google.maps.MapTypeId.SATELLITE
+            }).bind('init', function(ev, map)
             {
                 $('#geoMap').gmap(
                     'addMarker',
                     {
-                        'position'  : geoposString,
+                        'position'  : new google.maps.LatLng(
+                            position.coords.latitude,
+                            position.coords.longitude
+                        ),
                         'bounds'    : true
                     }
                 ).click(function()
@@ -128,6 +132,7 @@
                         this
                     );
                 });
+                $('#geoMap').gmap('option', 'zoom', 16);
             });
         });
         return this;
@@ -148,13 +153,20 @@
         else {
             if(/(#)?random(.php)?/.test(window.location.href)) {
                 k64.geoloc.init();
-                if(/jqm/.test(window.location.href)) {
-                    k64.geoloc.displayGeo();
-                }
-                else {
-                    document.getElementById('currentLocation').innerHTML = k64.geoloc.get("lastPosition");
-                }
+                document.getElementById('currentLocation').innerHTML = k64.geoloc.get("lastPosition");
             }
+        }
+        if(/jqm/.test(window.location.href)) {
+            $('a[href=#random]').click(function(e)
+            {
+                k64.geoloc.init();
+                k64.geoloc.displayGeo();
+            });
+            $('a').click(function(e)
+            {
+                $('a').removeClass('ui-btn-active');
+                $('a[href=' + this.href.substring(this.href.lastIndexOf('/') + 1) + ']').addClass('ui-btn-active');
+            });
         }
     };
     

@@ -6,14 +6,7 @@
     </head>
     <body>
 <?php include '../header.php'; ?>
-    <!--
-    <div id="idDePage" data-role="page">
-            <div data-role="header"><h1>Mon titre</h1></div>
-            <div data-role="content">ici votre contenu</div>
-            <div data-role="footer"><h6>Pied de page</h6></div>
-    </div>
-    -->
-        <div id="home" data-role="Home">
+        <div id="home" data-role="page">
             <div data-role="header"></div>
             <div data-role="content">
                 <ul>
@@ -33,7 +26,7 @@
             </div>
             <div data-role="footer"></div>
         </div>
-        <div id="search" data-role="Search" data-add-back-btn="true">
+        <div id="search" data-role="page" data-add-back-btn="true">
             <div data-role="header"></div>
             <div data-role="content">
                 <form method="get" action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>">
@@ -71,9 +64,10 @@
                     <a href="#" class="redButton" data-role="button" data-icon="delete">Effacer</a>
                     <a href="#" class="whiteButton" data-role="button" data-icon="search" data-theme>Rechercher</a>
                 </div>
+<?php include '../footer.php'; ?>
             </div>
         </div>
-        <div id="last" data-role="Last" data-add-back-btn="true">
+        <div id="last" data-role="page" data-add-back-btn="true">
             <div data-role="header"></div>
             <div data-role="content">
                 <video width="320" height="180" controls="controls">
@@ -83,23 +77,28 @@
                     Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
                 </video>
             </div>
-            <div data-role="footer"></div>
+            <div data-role="footer">
+<?php include '../footer.php'; ?>
+            </div>
         </div>
-        <div id="random" data-role="Random" data-add-back-btn="true">
+        <div id="random" data-role="page" data-add-back-btn="true">
             <div data-role="header"></div>
             <div data-role="content">
                 <p id="currentLocation">Page Random: Contenu par défaut</p>
                 <div id="geoMap" class="map rounded"></div>
             </div>
-            <div data-role="footer"></div>
+            <div data-role="footer">
+<?php include '../footer.php'; ?>
+            </div>
         </div>
-        <div id="legal" data-role="Legal" data-add-back-btn="true">
+        <div id="legal" data-role="page" data-add-back-btn="true">
             <div data-role="header"></div>
             <div data-role="content">
                 <p>contenu de la page legal</p>
             </div>
-            <div data-role="footer"></div>
-        </div>
+            <div data-role="footer">
 <?php include '../footer.php'; ?>
+            </div>
+        </div>
     </body>
 </html>
